@@ -12,11 +12,11 @@ services:
       - ./scrappy:/code/scrappy
 
   database:
-    image: postgres:10-alpine
+    image: postgres:11-alpine
     environment:
-      - POSTGRES_DB=app
+      - POSTGRES_DB=scrappyDB
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=supersecretpassword
+      - POSTGRES_PASSWORD=P@ssw0rd
     ports:
       - "5432:5432"
     networks:
