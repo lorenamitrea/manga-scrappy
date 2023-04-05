@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from .models import Artist
+from django.http import JsonResponse
 
-# Create your views here.
-
-def get_data():
-    pass
+def get_data(request):
+    artist_data = Artist.objects.all()
+    return JsonResponse(artist_data)
